@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Metodos e propriedades em classes</title>
+</head>
+<body>
+    <script>
+        class Human {
+            hungry = true
+
+            eat() {
+                console.log('eating...')
+                this.hungry = false
+            }
+        }
+
+        const person = new Human()
+    </script>
+</body>
+</html>
