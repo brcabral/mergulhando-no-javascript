@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Construtor</title>
+</head>
+<body>
+    <script>
+        class Human {
+            name
+            age
+            sex
+            hungry = true
+
+            constructor(props) {
+                if(!props.name) {
+                    throw Error('O nome é obrigatório')
+                }
+
+                this.name = props.name
+                this.age = props.age
+                this.sex = props.sex
+            }
+
+            eat() {
+                console.log('eating...')
+                this.hungry = false
+            }
+        }
+
+        const person = new Human({
+            name: 'Lucas',
+            age: 34,
+            sex: 'male'
+        })
+    </script>
+</body>
+</html>
