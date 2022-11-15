@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Spread operator</title>
+</head>
+<body>
+    <script>
+        const imutableArray = ['select', '*', 'from', 'posts']
+
+        /* 
+          Se fizer a cópia da forma convencional (const mutableArray = imutableArray), será copiado
+            a referência e não o valor da const imutableArray. Já utilizando o spread, será copiado
+            o valor
+        */
+        const mutableArray = [...imutableArray]
+        mutableArray.push('where id = 1')
+
+        console.log(mutableArray)
+    </script>
+</body>
+</html>
