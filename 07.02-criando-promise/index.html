@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Criando uma promise</title>
+</head>
+<body>
+    <script>
+        const promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (1 == 1) {
+                    resolve('😃')
+                } else {
+                    reject('🛑')
+                }
+            }, 5000)
+        })
+    </script>
+</body>
+</html>
