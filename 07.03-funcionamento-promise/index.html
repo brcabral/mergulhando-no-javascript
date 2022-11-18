@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Como funciona uma Promise</title>
+</head>
+<body>
+    <script>
+        function handleClick() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('Aprovado!')
+                    // reject('Reprovado!')
+                }, 5000);
+            })
+        }
+
+        const result = handleClick()
+            .then(res => {
+                console.log('Finalizado!')
+                return 'Qualquer coisa aleatória.'
+            })
+            .catch(err => {
+                console.log('Ocorreu um erro.')
+                return 'Erro 01. ' + err
+            })
+    </script>
+</body>
+</html>
